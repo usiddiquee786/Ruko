@@ -5,7 +5,6 @@
     <script type="text/brightscript" uri="UILogic/ContentTaskLogic.brs"/>
     <script type="text/brightscript" uri="UILogic/GridScreenLogic.brs"/>
     <script type="text/brightscript" uri="UILogic/MarkUpGridLogic.brs"/>
-
     <children>
         <!-- <Overhang
             id="overhang"
