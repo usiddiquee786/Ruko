@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MyNode" extends="ContentNode">
+ <interface>
+ <field id="mediaId" type="string" />
+ <field id="isFree" type="boolean" />
+ <field id="videoTitle" type="string" />
+ <field id="imagePath" type="string" />
+ <field id="noSoundVideo" type="string" />
+ <field id="videoPath" type="string" />
+ </interface>
+</component>

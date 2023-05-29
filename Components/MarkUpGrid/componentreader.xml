@@ -1,0 +1,55 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<component name = "ContentReader" extends = "Task" >
+
+  <interface>
+    <field id = "contenturi" type = "uri" />
+    <field id = "content" type = "node" />
+  </interface>
+
+  <script type = "text/brightscript" >
+
+    <![CDATA[
+
+    sub init()
+      m.top.functionName = "getcontent"
+    end sub
+
+    sub getcontent()
+    content = createObject("roSGNode", "ContentNode")
+    xfer = CreateObject("roURLTransfer")
+    xfer.SetCertificatesFile("common:/certs/ca-bundle.crt")
+    xfer.SetURL(m.top.contenturi)
+    rsp = xfer.GetToString()
+    rootChildren = []
+    rows = {}
+    'parse the feed and build a tree of ContentNodes to populate the GridView
+    json = ParseJson(rsp)
+    if json <> invalid
+        for each category in json
+            value = json.Lookup(category)
+            if Type(value) = "roArray" 'if parsed key value having other objects in it
+                    row = {}
+                    row.title = category
+                    row.children = []
+                    for each item in value 'parse items and push them to row
+                        itemData = content.createChild("MyNode")
+                        itemData.imagePath = item.imagePath
+                        itemData.videoTitle = item.videoTitle
+                        itemData.releaseDate = item.releaseDate
+                        itemData.mediaId = item.mediaId
+                        ?"Im free" item.isFree
+                        itemData.isFree=item.isFree
+                        itemData.noSoundVideo=item.noSoundVideo
+                        itemData.videoPath=item.videoPath
+                    end for
+            end if
+        end for
+        m.top.content = content
+    end if
+    end sub
+
+    ]]>
+
+  </script>
+
+</component>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="MarkUp" extends="Group">
+    <script type="text/brightscript" uri="MarkUpGrid.brs" />
+    <interface>
+    <field id="rowlistbutton" type="intarray" alwaysnotify="true" alias="buttons.buttonSelected" />
+    <!-- Specifies the content for the Grid-->
+    <!-- <field id="width" type="float" onChange="widthChanged"/>
+    <field id="height" type="float" onChange="heightChanged"/>
+    <field id="content" type="node" onChange="itemContentChanged"/> -->
+    </interface>
+    <children>
+        <Video
+            id="backgroundVideo"
+            translation="[0, 0]"
+            width = "1920"
+            height = "1080"
+            visible="true"
+        />
+        <Poster
+            id="bgimage"
+            translation="[0,0]"
+            width="1920"
+            height="1080"
+        />
+        <Button
+            id="buttons"
+            text="Row list"
+            translation="[660,20]"
+            iconUri=""
+            focusedIconUri=""
+            textColor="0xFFFFFF"
+            maxWidth="230" 
+            minWidth="230"
+            height="60"
+        />
+        <Button
+            id="gridbuttons"
+            text="Grid item"
+            translation="[900,20]"
+            iconUri=""
+            focusedIconUri=""
+            textColor="0xFFFFFF"
+            maxWidth="250" 
+            minWidth="250"
+            height="60"
+        />
+        <MarkupGrid 
+            id = "exampleMarkupGrid" 
+            translation = "[ 130, 160 ]" 
+            itemComponentName = "MarkupGridItem" 
+            numColumns = "3" 
+            numRows = "5" 
+            itemSize = "[ 532, 308 ]" 
+            itemSpacing = "[ 20, 20 ]" 
+            vertFocusAnimationStyle = "fixedFocus"
+            drawFocusFeedback = "true" />
+        
+    </children>
+</component>

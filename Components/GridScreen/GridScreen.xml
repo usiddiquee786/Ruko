@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="GridScreen" extends="Group">
+    <script type="text/brightscript" uri="GridScreen.brs"/>
+    <interface>
+    <!-- Specifies the content for the Grid-->
+    <field id="content" type="node" alias="RowList.content" />
+    
+    <field id="rowlistbutton2" type="intarray" alwaysnotify="true" alias="gridbuttons.buttonSelected" />
+    <field id="buttonSelected" type="string" alwaysNotify="true" alias="hide.buttonSelected" />
+    </interface>
+    <children>
+     <!-- Label with title and length of content-->
+        
+        <Video
+            id="backgroundVideo"
+            translation="[0, 0]"
+            width = "1920"
+            height = "1080"
+            visible="true"
+        />
+        <Poster
+            id="bgimage"
+            translation="[0,0]"
+            width="1920"
+            height="1080"
+        />
+        
+        <Label
+            id="titleLabel"
+            width="1020"
+            translation="[130,70]"
+        />
+        <Button
+            id="hide"
+            text="Hide BTN"
+            translation="[80,120]"
+            iconUri=""
+            focusedIconUri=""
+            textColor="0xFFFFFF"
+            maxWidth="250" 
+            minWidth="240"
+            height="60"
+        />
+        <!-- <Button id="settingButtonB" focusable="true" iconUri="" showFocusFootprint="true"
+                focusFootprintBitmapUri="pkg:/images/home screen/landing_settings.png"
+                focusedIconUri=""
+                text="" visible="true" translation="[1661 , 53 ]" maxWidth="208 " minWidth="208 "
+                height="57" focusBitmapUri="pkg:/images/home screen/landing_settings_f.png" /> -->
+        <Button
+            id="buttons"
+            text="Row list"
+            translation="[660,20]"
+            iconUri=""
+            focusedIconUri=""
+            textColor="0xFFFFFF"
+            maxWidth="230" 
+            minWidth="230"
+            height="60"
+        />
+        <Button
+            id="gridbuttons"
+            text="Grid item"
+            translation="[900,20]"
+            iconUri=""
+            focusedIconUri=""
+            textColor="0xFFFFFF"
+            maxWidth="250" 
+            minWidth="250"
+            height="60"
+        />
+        <Rowlist
+            itemComponentName="RowListItemComponent"
+            id="rowlist"
+            translation="[80,230]"
+            numRows="5"
+            rowitemSize="[[320 ,180]]"
+            rowItemSpacing="[[30, 30]]"
+            itemSize="[1700,280]"
+            rowLabelOffset="[[10,10]]"
+            focusXOffset="[10, 10]"
+            showRowLabel="[true]"
+            rowFocusAnimationStyle = "fixedFocusWrap"
+        />
+    </children>
+</component>
