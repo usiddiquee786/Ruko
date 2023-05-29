@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component name="GridScreen" extends="Group">
-    <script type="text/brightscript" uri="GridScreen.brs"/>
+<component name="rowlistscreen" extends="Group">
+    <script type="text/brightscript" uri="RowListScreen.brs"/>
     <interface>
     <!-- Specifies the content for the Grid-->
     <field id="content" type="node" alias="RowList.content" />

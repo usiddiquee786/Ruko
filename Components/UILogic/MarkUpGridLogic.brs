@@ -7,5 +7,5 @@ sub ShowMarkupGridScreen()
 end sub
 sub onButtonSelected2(event as Object)
     RunContentTask()
-    ShowGridScreen()
+    ShowRowListScreen()
 end sub

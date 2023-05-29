@@ -1,5 +1,5 @@
-sub ShowGridScreen()
-    m.GridScreen = CreateObject("roSGNode", "GridScreen")
+sub ShowRowListScreen()
+    m.GridScreen = CreateObject("roSGNode", "rowlistscreen")
     m.GridScreen.observeField("rowlistbutton2", "onButtonSelected")
     ShowScreen(m.GridScreen)'show GridScreen
     

@@ -5,7 +5,7 @@ sub Init()
     ' detailsScreen = CreateObject("roSGNode", "Main")
     ' detailsScreen.ObserveField("buttonSelected", "OnButtonSelected")
     InitScreenStack()
-    ShowGridScreen()
+    ShowRowListScreen()
     RunContentTask()
 end sub
 function OnkeyEvent(key as String, press as Boolean) as Boolean

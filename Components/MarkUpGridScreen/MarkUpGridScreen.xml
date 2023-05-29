@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="MarkUp" extends="Group">
-    <script type="text/brightscript" uri="MarkUpGrid.brs" />
+    <script type="text/brightscript" uri="MarkUpGridScreen.brs" />
     <interface>
     <field id="rowlistbutton" type="intarray" alwaysnotify="true" alias="buttons.buttonSelected" />
     <!-- Specifies the content for the Grid-->
